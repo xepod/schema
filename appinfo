@@ -16,7 +16,7 @@
       "type": "string"
     },
     "license": {
-      "$ref": "/refs/spdx-license-id.json",
+      "$ref": "./refs/spdx-license-id.json",
       "description": "license"
     },
     "url": {
