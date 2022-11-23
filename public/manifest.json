@@ -17,7 +17,7 @@
     },
     "license": {
       "description": "SPDX license identifier",
-      "$ref": "./definitions/spdx-license-id"
+      "$ref": "./definitions/spdx-license-id.json"
     },
     "url": {
       "description": "Url pattern for download package",
