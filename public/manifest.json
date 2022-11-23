@@ -1,42 +1,41 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema",
-  "title": "Manifest",
-  "description": "A manifest for xepod app package",
+  "description": "JSON schema of xepod's manifest",
   "properties": {
     "version": {
-      "description": "Current version number of app",
+      "description": "Current version number. This field should be updated automatically.",
       "type": "string"
     },
     "description": {
-      "description": "A brief description of app",
+      "description": "A brief description.",
       "type": "string"
     },
     "homepage": {
-      "description": "Link to app's homepage",
-      "type": "string"
+      "description": "URL to homepage.",
+      "format": "uri"
     },
     "license": {
-      "title": "App's license",
-      "description": "This field should be a valid SPDX license identifier.",
+      "description": "License ID. This field should be a valid SPDX license identifier.",
       "$ref": "./definitions/spdx-license-id.json"
     },
     "url": {
-      "description": "Url pattern for download package",
-      "format": "uri"
+      "description": "URL pattern of target file. Use {version} as version number.",
+      "format": "uri",
+      "pattern": ".*{version}.*"
     },
     "hash": {
-      "description": "Hash of current package's archive file",
+      "description": "SHA256SUM of target file. This field is auto-generated and should not be edited.",
       "pattern": "[a-z\\d]{64}$"
     },
     "update": {
       "description": "Infos for version checking",
       "properties": {
         "url": {
-          "description": "Url for version checking",
+          "description": "URL for version checking",
           "type": "string"
         },
         "regex": {
-          "description": "Regular expression for version checking",
+          "description": "Regex for version checking",
           "type": "string"
         }
       }
