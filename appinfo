@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "/schema/appinfo",
   "title": "AppInfo",
   "description": "A manifest for xepod apps",
   "properties": {
@@ -16,7 +17,7 @@
       "type": "string"
     },
     "license": {
-      "$ref": "./refs/spdx-license-id.json",
+      "$ref": "./definitions/spdx-license-id.json",
       "description": "license"
     },
     "url": {
