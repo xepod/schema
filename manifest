@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "AppInfo",
+  "description": "A manifest for xepod apps",
+  "properties": {
+    "version": {
+      "description": "Current version number of app",
+      "type": "string"
+    },
+    "description": {
+      "description": "A brief description of app",
+      "type": "string"
+    },
+    "homepage": {
+      "description": "Link to app's homepage",
+      "type": "string"
+    },
+    "license": {
+      "description": "SPDX license identifier",
+      "$ref": "./definitions/spdx-license-id"
+    },
+    "url": {
+      "description": "Url pattern for download package",
+      "format": "uri"
+    },
+    "hash": {
+      "description": "Hash of current package's archive file",
+      "pattern": "[a-z\\d]{64}$"
+    },
+    "update": {
+      "description": "Infos for version checking",
+      "properties": {
+        "url": {
+          "description": "Url for version checking",
+          "type": "string"
+        },
+        "regex": {
+          "description": "Regular expression for version checking",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
