@@ -28,15 +28,15 @@
       "pattern": "[a-z\\d]{64}$"
     },
     "update": {
-      "description": "Infos for version checking",
+      "description": "Infos for version checking.",
       "properties": {
         "url": {
-          "description": "URL for version checking",
-          "type": "string"
+          "description": "URL for version checking.",
+          "format": "uri"
         },
         "regex": {
-          "description": "Regex for version checking",
-          "type": "string"
+          "description": "Regex for version checking. Must contain one capturing group to capture the version number.",
+          "pattern": ".*\\(.+\\).*"
         }
       }
     }
