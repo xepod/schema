@@ -26,6 +26,6 @@ jobs:
     steps:
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: .
+          path: ./
       - id: deployment
         uses: actions/deploy-pages@v1
