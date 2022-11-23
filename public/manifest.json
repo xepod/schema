@@ -19,7 +19,7 @@
       "$ref": "./definitions/spdx-license-id.json"
     },
     "url": {
-      "description": "URL pattern of target file. Use {version} as version number.",
+      "description": "URL template of target file. {version} will be replaced by version field.",
       "format": "uri",
       "pattern": ".*{version}.*"
     },
