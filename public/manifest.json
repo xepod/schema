@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema",
-  "title": "AppInfo",
-  "description": "A manifest for xepod apps",
+  "title": "Manifest",
+  "description": "A manifest for xepod app package",
   "properties": {
     "version": {
       "description": "Current version number of app",
@@ -16,7 +16,8 @@
       "type": "string"
     },
     "license": {
-      "description": "SPDX license identifier",
+      "title": "App's license",
+      "description": "This field should be a valid SPDX license identifier.",
       "$ref": "./definitions/spdx-license-id.json"
     },
     "url": {
