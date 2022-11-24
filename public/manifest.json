@@ -24,7 +24,7 @@
       "pattern": ".*{version}.*"
     },
     "hash": {
-      "description": "SHA256SUM of target file. This field is auto-generated and should not be edited.",
+      "description": "SHA256 of target file. This field is auto-generated and should not be edited.",
       "pattern": "[a-z\\d]{64}$"
     },
     "update": {
